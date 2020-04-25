@@ -1,0 +1,83 @@
+/inch {72 mul} def
+
+/box {
+newpath
+0 0 moveto
+3.543 inch 0 lineto
+3.543 inch 1.969 inch lineto
+0 1.969 inch lineto
+
+0 setlinewidth 
+closepath
+gsave
+0.9 0.95 0.9 setrgbcolor
+fill
+grestore
+stroke
+} def
+
+/pp {
+newpath
+0.37 inch 1.15 inch moveto
+/Times-Bold findfont
+20 scalefont
+setfont
+(PostScript Programmer) show
+closepath
+} def
+
+
+/name {
+newpath
+1.25 inch 0.6 inch moveto
+/Times-Bold findfont
+15 scalefont
+setfont
+(Taeseop Yun) show
+closepath
+} def
+
+/leaf{
+
+0.2 inch 0.2 inch 0.4 inch -0.1 inch 0.6 inch 0.15 inch curveto
+0.8 inch 0.4 inch 0.6 inch 0.65 inch 0.45 inch 0.5 inch curveto
+0.42 inch 0.9 inch -0.2 inch 0.6 inch 0 inch 0 inch curveto
+1 setlinewidth
+}def
+
+200 200 translate
+box
+0 0 0 setrgbcolor
+pp
+
+name
+
+gsave
+0 0.3 0 setrgbcolor
+3.1 inch 0.4 inch moveto
+3.1 inch 0.4 inch translate
+0.2 0.2 scale
+
+leaf
+4 { leaf
+90 rotate } repeat
+
+fill
+grestore
+
+
+
+1 inch 1 inch moveto
+1 inch 1 inch translate
+1 1 scale
+0 0.3 0 setrgbcolor
+leaf
+4 { leaf
+90 rotate } repeat
+
+stroke
+
+
+
+
+showpage
